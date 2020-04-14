@@ -8,7 +8,5 @@ var json = JSON.parse(fs.readFileSync(process.argv[3]));
 console.log("start transform");
 var result = script.transform(json)
 console.log("finish transform");
-fs.writeFile("output.json", JSON.stringify(result), (err) => {
-  if (err) throw err;
-});
+fs.writeFileSync("output.json", JSON.stringify(result));
 console.log("finish write result to output.json");
