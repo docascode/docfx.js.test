@@ -2,6 +2,7 @@ if (process.argv.length < 4) {
   console.log("useage: node test {docfxJsPreprocessor} {rawModel}");
   process.exit();
 }
+
 var script = require('./' + process.argv[2]);
 var fs = require('fs');
 var json = JSON.parse(fs.readFileSync(process.argv[3]));
